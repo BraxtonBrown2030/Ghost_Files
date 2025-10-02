@@ -1,30 +1,26 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class Body_Tracking : MonoBehaviour
-{
+{   
     public UDP udpBody;
-    public GameObject bodyPoint; // Single GameObject to move
-
-    private void Update()
+    public List<GameObject> bodyPoints = new List<GameObject>();
+    public float trackingDiv = 100;
+    
+    
+    private void FixedUpdate()
     {
         string data = udpBody.data;
-        
+        if (string.IsNullOrEmpty(data)) return;
+
         data = data.Trim(new char[] { '[', ']' });
-        string[] points = data.Split(',');
-
-        // Ensure there are enough points
-        if (points.Length < 2)
-        {
-            Debug.LogError("Not enough points received.");
-            return;
-        }
-
-        // Parse the first landmark position
-        // x-xis is minused by 7 because it offenses the position of the body by 7 when transferred
-        float x = 7 - float.Parse(points[0]) / 100;
-        float y = float.Parse(points[1]) / 100;
+        string[] values = data.Split(',');
         
-        // Update the position of the single GameObject
-        bodyPoint.transform.localPosition = new Vector3(x, y, bodyPoint.transform.localPosition.z);
+        for (int i = 0; i < bodyPoints.Count; i++)
+        {  
+            float x = 7 - float.Parse(values[i * 2]) / trackingDiv;
+            float y = float.Parse(values[i * 2 + 1]) / trackingDiv; // try minus by 4 if position not working right
+
+            bodyPoints[i].transform.localPosition = new Vector3(x, y, bodyPoints[i].transform.localPosition.z);
+        }
     }
 }
