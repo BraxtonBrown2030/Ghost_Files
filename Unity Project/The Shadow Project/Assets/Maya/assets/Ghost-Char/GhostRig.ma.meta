@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Unity Project/The Shadow Project/Assets/Maya/assets/GhostRig.fbx.meta
-guid: 58ada776b964343ca8964f7cb4c2a5e7
-========
-guid: b5fa3012c1ab6419b9fc3f92945e724b
->>>>>>>> 52f7d9f08606f6952b6fc2c913753d80b45fd7a9:Unity Project/The Shadow Project/Assets/Maya/Ghost_Anim copy.ma.meta
+guid: d0f9d28fac92e4c3c97fd533e496dc86
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
