@@ -1,13 +1,14 @@
 /*
 Originial Coder: Zackery E.
 Recent Coder: Owynn A.
-Recent Changes: Formatting and Commenting
-Last date worked on: 9/8/2025
+Recent Changes: Sliding Healthbar Update
+Last date worked on: 9/30/2025
 */
 
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HealthBarBehaviour : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class HealthBarBehaviour : MonoBehaviour
     public void Awake()
     {
         Debug.Log("Healthbar Awake");
+		slider.maxValue = maxHealth;
+		health.value = maxHealth;
         currentBarHealth = health.value;
         UpdateSlider();
     }//End Awake
@@ -32,28 +35,44 @@ public class HealthBarBehaviour : MonoBehaviour
 
         RunHealthEvents();
         currentBarHealth = health.value;
-        UpdateSlider();
+        RunUpdateSlider();
+        Debug.Log("Healthbar Update");
     }//End UpdateHealth
 
     private void RunHealthEvents()
     {
-        if (health.value <= 0) //health is depleted
+        if (currentBarHealth  <= 0) //health is depleted
         {
+            Debug.Log("Healthbar On Death");
             onDepleted.Invoke();
         }
         else if (currentBarHealth < health.value) //health increased
         {
+            Debug.Log("Healthbar On Health");
             onHeal.Invoke();
         }
         else if (currentBarHealth > health.value) //health is decreased
         {
+            Debug.Log("Healthbar On Damage");
             onDamage.Invoke();
         } 
     }//End RunHelathEvents
 
-    private void UpdateSlider()
+    public void RunUpdateSlider()
     {
-        slider.maxValue = maxHealth;
-        slider.value = (currentBarHealth <= maxHealth) ? currentBarHealth : maxHealth;
-    }//End UpdateSlider
-}
+        StartCoroutine(UpdateSlider());
+    }//End RunUpdateSlider
+
+	private IEnumerator UpdateSlider()
+	{
+		float speed = 15f;
+
+    	while (slider.value > health.value)
+    	{
+        	slider.value -= Time.deltaTime * speed;;
+        	yield return null;
+    	}//end while
+
+        Debug.Log("it worked");
+    }//end UpdateSlider
+}//end class
