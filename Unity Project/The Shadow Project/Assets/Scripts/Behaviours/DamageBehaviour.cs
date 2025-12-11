@@ -1,8 +1,10 @@
 /*
 Originial Coder: Owynn A.
-Recent Coder: Owynn A.
-Recent Changes: Initial Coding
-Last date worked on: 9/23/2025
+Recent Coder: Zackery E.
+Recent Changes: Replaced this with a health value behavior, and to object
+behavior to detect it and damage it. This script is is kept in case you want
+to keep it.
+Last date worked on: 11/3/2025
 */
 
 using UnityEngine;
@@ -18,19 +20,29 @@ public class DamageBehaviour : MonoBehaviour
     {
 		Debug.Log(other.name);
         ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
+		ResetObjectBehaviour resetBehaviour = other.GetComponent<ResetObjectBehaviour>();
+	if(resetBehaviour == null)
+	{
+		Debug.Log("no behaviour found");
+	}
+	else
+	{
+		Debug.Log("we cool");
+	}
 		if (this.gameObject.CompareTag("Ghost"))
 		{
 			if(objectBehaviour.thrown)
 			{
-				damage = objectBehaviour.damage.value;
+				damage = objectBehaviour.damage;
                 damage *= multiplier;
                 health.value -= damage;
                 OnDamage.Invoke();
+				resetBehaviour.Reset();
 			}
 			else
-			{
-				objectBehaviour.thrown = true;	
-			}
+            {
+                
+            }
 		}
         else if (other.CompareTag("Object"))
         {
@@ -46,14 +58,15 @@ public class DamageBehaviour : MonoBehaviour
 				Debug.Log("Return");
                 OnReturn.Invoke();
                 ObjectBehaviour block = other.GetComponent<ObjectBehaviour>();
-                block.OnReturn();
+                //block.OnReturn();
             } // end of if}
             else
             {
-                damage = objectBehaviour.damage.value;
+                damage = objectBehaviour.damage;
                 damage *= multiplier;
                 health.value -= damage;
                 OnDamage.Invoke();
+				resetBehaviour.Reset();
             } // end of else
         } // end of CompareTag
     } // end of OnTriggerEnter

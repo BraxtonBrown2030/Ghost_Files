@@ -1,67 +1,107 @@
 using UnityEngine;
 using System.Collections.Generic;
+
 public class Body_Tracking : MonoBehaviour
 {
     public UDP udpBody;
-    public GameObject bodyPoint; // Single GameObject to move
-    [Tooltip("in case not ports are assigned it will use these th make point and carte a skeleton for testing")]
-    public GameObject bodyPointPrefab; // Prefab to clone for each landmark
-    [Tooltip("Assign point in order of Left arm 1-3 , right arm 1-3, left leg 1-3, right leg 1-3, then last is mid point")]
-    public List<GameObject> bodyPoints = new List<GameObject>();
-    
-    // Adjust these to match your scene scale
-    public float scale = 0.01f;
-    [Tooltip("deaflut is (X = -7, Y = 12, Z = 0)")]
-    public Vector3 offset = new Vector3(0, 0, 0);
 
-    private void FixedUpdate()
+    [System.Serializable]
+    public class BodySet
     {
-        string data = udpBody.data;
+        public List<GameObject> points = new List<GameObject>(14); 
+        // IMPORTANT: exactly 14 per set (13 joints + midpoint)
+    }
 
-        if (string.IsNullOrEmpty(data))
-            return;
+    public List<BodySet> sets = new List<BodySet>();   // Expect 4 sets
+    public float scale = 0.01f;
+    public Vector3 offset;
+    public float timeout = 0.5f;
 
-        data = data.Trim(new char[] { '[', ']' });
-        string[] points = data.Split(',');
+    private float[] lastUpdate; 
+    private Vector3[][] restPositions;
 
-        int pointNumber = points.Length / 2; // assuming data is x,y,z
+    void Start()
+    {
+        lastUpdate = new float[sets.Count];
+        restPositions = new Vector3[sets.Count][];
 
-        // Create missing points
-        while (bodyPoints.Count < pointNumber)
+        for (int s = 0; s < sets.Count; s++)
         {
-            Debug.LogError("Not enough points received.");
+            restPositions[s] = new Vector3[sets[s].points.Count];
+
+            for (int i = 0; i < sets[s].points.Count; i++)
+            {
+                restPositions[s][i] = sets[s].points[i].transform.position;
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        string raw = udpBody.data;
+        if (string.IsNullOrWhiteSpace(raw))
             return;
-            GameObject newPoint = Instantiate(bodyPointPrefab);
-            // newPoint.transform.parent = transform; // Keep hierarchy clean
-            bodyPoints.Add(newPoint);
+
+        string[] pts = raw.Split(',');
+        int perSet = 14 * 2;  // 14 points * (x,y)
+
+        if (pts.Length < perSet)
+            return;
+
+        for (int s = 0; s < sets.Count; s++)
+        {
+            int start = s * perSet;
+
+            if (start + perSet > pts.Length)
+                break;
+
+            bool updated = false;
+
+            for (int i = 0; i < sets[s].points.Count; i++)
+            {
+                int baseIndex = start + i * 2;
+
+                bool okX = float.TryParse(pts[baseIndex], out float x);
+                bool okY = float.TryParse(pts[baseIndex + 1], out float y);
+
+                if (!okX || !okY)
+                    continue;
+
+                // If Python sent zeros → no person found → use rest pose
+                if (Mathf.Abs(x) < 0.001f && Mathf.Abs(y) < 0.001f)
+                {
+                    sets[s].points[i].transform.position = restPositions[s][i];
+                    continue;
+                }
+
+                Vector3 pos = new Vector3(
+                    -x * scale + offset.x,
+                    y * scale + offset.y,
+                    offset.z
+                );
+
+                sets[s].points[i].transform.position = pos;
+                updated = true;
+            }
+
+            if (updated)
+                lastUpdate[s] = Time.time;
         }
 
-        // Parse the first landmark position
-        // x-xis is minused by 7 because it offenses the position of the body by 7 when transferred
-        float x = 7 - float.Parse(points[0]) / 100;
-        float y = float.Parse(points[1]) / 100;
-        
-        // Update the position of the single GameObject
-        bodyPoint.transform.localPosition = new Vector3(x, y, bodyPoint.transform.localPosition.z);
-        // Update positions
-        for (int i = 0; i < pointNumber; i++)
-        {
-            float x = float.Parse(points[i * 2]) * scale + offset.x;
-            float y = float.Parse(points[i * 2 + 1]) * scale + offset.y;
-            float z = offset.z;
+        ApplyTimeouts();
+    }
 
-            Vector3 targetPos = new Vector3(x, y, z);
-            
-            bodyPoints[i].transform.localPosition = new Vector3(x, y, z);
-            
-            /*
-            // Smoothly interpolate from current to target
-            bodyPoints[i].transform.localPosition = Vector3.Lerp(
-                bodyPoints[i].transform.localPosition,
-                targetPos,
-                1f // <-- smoothing factor, tweak between 0.05f (very smooth) and 1.0f (instant snap)
-            );
-            */
+    void ApplyTimeouts()
+    {
+        for (int s = 0; s < sets.Count; s++)
+        {
+            if (Time.time - lastUpdate[s] > timeout)
+            {
+                for (int i = 0; i < sets[s].points.Count; i++)
+                {
+                    sets[s].points[i].transform.position = restPositions[s][i];
+                }
+            }
         }
     }
 }
