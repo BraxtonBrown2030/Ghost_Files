@@ -74,6 +74,42 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ghost_surprise" ID="{1C229BFC-E5F1-4E5B-B121-A8594CD83310}">
+							<ChildrenList>
+								<Action Name="" ID="{9FCCD191-924A-4839-8911-DDD685DE06BA}" ShortID="411876887">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ghost_notice" ID="{0D8BAD30-D9AB-4769-9166-93EA0A84ECF0}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ghost_appear" ID="{61D77602-42F6-49D8-A73B-E1C9D4FAEDF3}">
+							<ChildrenList>
+								<Action Name="" ID="{77550BD3-8F80-498E-B60A-D3D743A8D5EF}" ShortID="461176983">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.55"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ghost_appear" ID="{CD22162B-8E52-4672-B25A-9F9D3195461C}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ghost_damage" ID="{69598DCA-D792-4216-9B9D-CA8A45AEF431}">
+							<ChildrenList>
+								<Action Name="" ID="{0C62750D-388D-4CEE-A9C7-7DAE27FFD160}" ShortID="197570757">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ghost_damage" ID="{6D99EC3F-2485-4708-8D66-A893CE6CB759}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Objects" ID="{76CAAF3D-47E7-42AF-96D8-9D6D287510C9}" ShortID="756885020">

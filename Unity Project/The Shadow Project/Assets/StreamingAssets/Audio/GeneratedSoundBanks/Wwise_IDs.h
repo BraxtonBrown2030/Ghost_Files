@@ -14,7 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AMB_ATTIC_START = 1697873554U;
+        static const AkUniqueID GHOST_APPEAR = 3830028166U;
         static const AkUniqueID GHOST_ATTACK = 979070061U;
+        static const AkUniqueID GHOST_SURPRISE = 2809720724U;
         static const AkUniqueID OBJECT_HIT_PLAYER = 2405462070U;
         static const AkUniqueID TEST_EVENT = 4258653052U;
     } // namespace EVENTS

@@ -1402,10 +1402,14 @@
 				</ActorMixer>
 				<ActorMixer Name="Enemies" ID="{1E72011A-9FD4-4259-8618-079A5B678F8F}" ShortID="423340033">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="11"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 						</Reference>
@@ -1620,6 +1624,35 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ghost_appear" ID="{CD22162B-8E52-4672-B25A-9F9D3195461C}" ShortID="604983697">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ghost_summon" ID="{9292E8D3-38B4-465F-8E71-812D5353DF05}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.051541446337642"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0970191931061497"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ghost_summon.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="994700634"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ghost_summon" ID="{9292E8D3-38B4-465F-8E71-812D5353DF05}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="ghost_notice" ID="{30FAA284-444B-436A-938B-DFBEE3ACE8F5}" ShortID="478271908">
 									<ReferenceList>
@@ -1821,6 +1854,10 @@
 									</ReferenceList>
 								</ActorMixer>
 								<ActorMixer Name="ghost_damage" ID="{1E3ED2D4-CA01-4360-8F05-74000BF61688}" ShortID="653842120">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
@@ -1830,10 +1867,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="ghost_vox_hit" ID="{AE985262-B0AF-4ABD-B174-28D21134B0EA}" ShortID="302506463">
-											<PropertyList>
-												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-											</PropertyList>
+										<BlendContainer Name="ghost_damage" ID="{6D99EC3F-2485-4708-8D66-A893CE6CB759}" ShortID="207526802">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
@@ -1843,8 +1877,15 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="ghost_vox_hit_01" ID="{3221F567-CAAF-40FB-94F8-B7CA24FFDFC0}" ShortID="121553613">
+												<RandomSequenceContainer Name="ghost_vox_hit" ID="{AE985262-B0AF-4ABD-B174-28D21134B0EA}" ShortID="302506463">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 														</Reference>
@@ -1853,27 +1894,210 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="ghost_vox_hit" ID="{CC28085C-868C-4DC6-85D5-C9E6EBBE63DC}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0535751864939149"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.522358068315666"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="7.62107027875933"/>
-																<Property Name="TrimEnd" Type="Real64" Value="8.67918021201413"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ghost_vox_hit.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="561833537"/>
-															</MediaIDList>
-														</AudioFileSource>
+														<Sound Name="ghost_vox_hit_01" ID="{3221F567-CAAF-40FB-94F8-B7CA24FFDFC0}" ShortID="121553613">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="ghost_vox_hit" ID="{CC28085C-868C-4DC6-85D5-C9E6EBBE63DC}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0535751864939149"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.522358068315666"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="7.62107027875933"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="8.67918021201413"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>ghost_vox_hit.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="561833537"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="ghost_vox_hit" ID="{CC28085C-868C-4DC6-85D5-C9E6EBBE63DC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_vox_hit_02" ID="{A17B75C7-EEE5-4735-AB44-AE643BD2166E}" ShortID="6804847">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="ghost_vox_hit" ID="{C40163AD-E8CC-4A9B-A9E0-F282505A5051}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.040181389870436"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.321451118963486"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="5.53163800549667"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="6.42902237926972"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>ghost_vox_hit.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="403673127"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="ghost_vox_hit" ID="{C40163AD-E8CC-4A9B-A9E0-F282505A5051}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_vox_hit_03" ID="{4EF6D67E-B63D-49DF-B6EE-A06FF8DF503D}" ShortID="677904095">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="ghost_vox_hit" ID="{FD7308E0-A1A7-4425-A357-47282D4CC48D}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0535751864939145"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.375026305457401"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="4.6342536317236"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="5.49145661562622"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>ghost_vox_hit.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="196917997"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="ghost_vox_hit" ID="{FD7308E0-A1A7-4425-A357-47282D4CC48D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_vox_hit_04" ID="{41ED15F0-03FB-4121-B107-AA3743580B66}" ShortID="1068428671">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="ghost_vox_hit" ID="{4AF4E7E1-4DB9-4338-9850-8E21D6B0D41B}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.066968983117393"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.1875131527287"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="3.88420102080879"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="4.66104122497055"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>ghost_vox_hit.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="278030697"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="ghost_vox_hit" ID="{4AF4E7E1-4DB9-4338-9850-8E21D6B0D41B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_vox_hit_05" ID="{97478D7F-19BA-4235-B35A-88F44FCD3750}" ShortID="868609923">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="ghost_vox_hit" ID="{D5801736-7D88-46F4-B4DB-DA19A7451CA5}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.107150372987829"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.57593325480958"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="1.76798115429917"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="2.73233451118964"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>ghost_vox_hit.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="273707060"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="ghost_vox_hit" ID="{D5801736-7D88-46F4-B4DB-DA19A7451CA5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_vox_hit_06" ID="{DCBD41EF-249C-42C0-A7DE-A5835E63B068}" ShortID="807363933">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="ghost_vox_hit" ID="{739F06FF-0F71-418B-B010-21925DA96C7E}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0535751864939144"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.723265017667845"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.508964271692187"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.66083078131133"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>ghost_vox_hit.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="865077179"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="ghost_vox_hit" ID="{739F06FF-0F71-418B-B010-21925DA96C7E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ghost_vox_hit" ID="{CC28085C-868C-4DC6-85D5-C9E6EBBE63DC}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ghost_vox_hit_02" ID="{A17B75C7-EEE5-4735-AB44-AE643BD2166E}" ShortID="6804847">
+													<PositioningInfo>
+														<Position Name="" ID="{F25B9CF2-EC2A-4F0C-BB1B-5BDCFCC34A75}"/>
+													</PositioningInfo>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="ghost_smack_hit" ID="{63FA2550-D07C-4541-9103-4754243947FB}" ShortID="414860497">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>24</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{60DE3DEC-6DFD-45DE-8139-4DD84C5B79C9}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>16</Value>
+															</ValueList>
+														</Property>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverrideEffect" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 														</Reference>
@@ -1882,148 +2106,245 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="ghost_vox_hit" ID="{C40163AD-E8CC-4A9B-A9E0-F282505A5051}">
+														<Sound Name="ghost_smack_02" ID="{58406BC2-4747-4149-AA39-0AE0C600814C}" ShortID="910773815">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.040181389870436"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.321451118963486"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="5.53163800549667"/>
-																<Property Name="TrimEnd" Type="Real64" Value="6.42902237926972"/>
+																<Property Name="3DSpatialization" Type="int16" Value="2"/>
 															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ghost_vox_hit.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="403673127"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ghost_vox_hit" ID="{C40163AD-E8CC-4A9B-A9E0-F282505A5051}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ghost_vox_hit_03" ID="{4EF6D67E-B63D-49DF-B6EE-A06FF8DF503D}" ShortID="677904095">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ghost_vox_hit" ID="{FD7308E0-A1A7-4425-A357-47282D4CC48D}">
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{CAFBEE84-23EA-412D-8E89-8E05ACB353A3}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0274000049368088"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0822000148104265"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="1.63030029374013"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="2.10980038013428"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="651684769"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{AA675A6A-3577-4553-B2AC-DF0D4DFF2944}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{CAFBEE84-23EA-412D-8E89-8E05ACB353A3}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_smack_03" ID="{174843DA-800C-485D-8F39-23D8D258E179}" ShortID="156743173">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0535751864939145"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.375026305457401"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="4.6342536317236"/>
-																<Property Name="TrimEnd" Type="Real64" Value="5.49145661562622"/>
+																<Property Name="3DSpatialization" Type="int16" Value="2"/>
 															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ghost_vox_hit.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="196917997"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ghost_vox_hit" ID="{FD7308E0-A1A7-4425-A357-47282D4CC48D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ghost_vox_hit_04" ID="{41ED15F0-03FB-4121-B107-AA3743580B66}" ShortID="1068428671">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ghost_vox_hit" ID="{4AF4E7E1-4DB9-4338-9850-8E21D6B0D41B}">
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{61F72330-2B23-4922-94D4-2C66FBA6C60B}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0274000049368093"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.137000024684044"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="5.17860093305686"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="5.71290102932464"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="545847753"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{1E6347F4-C5A0-4972-A36B-E71CF68EF673}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{61F72330-2B23-4922-94D4-2C66FBA6C60B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_smack_05" ID="{D972F4F5-3464-4BA5-A927-1D9CFE9815CE}" ShortID="723051984">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.066968983117393"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.1875131527287"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="3.88420102080879"/>
-																<Property Name="TrimEnd" Type="Real64" Value="4.66104122497055"/>
+																<Property Name="3DSpatialization" Type="int16" Value="2"/>
 															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ghost_vox_hit.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="278030697"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ghost_vox_hit" ID="{4AF4E7E1-4DB9-4338-9850-8E21D6B0D41B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ghost_vox_hit_05" ID="{97478D7F-19BA-4235-B35A-88F44FCD3750}" ShortID="868609923">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ghost_vox_hit" ID="{D5801736-7D88-46F4-B4DB-DA19A7451CA5}">
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{1FD9CB77-D5CA-4798-8869-186B9A14E5DF}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0411000074052126"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0959000172788311"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="10.7682019401659"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="11.2066020191548"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="496235049"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{B581407B-6965-4438-826F-E54A25B0E1DB}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{1FD9CB77-D5CA-4798-8869-186B9A14E5DF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_smack_01" ID="{C9502F32-728C-4585-9FB4-FED4C3B33D4D}" ShortID="200166269">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.107150372987829"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.57593325480958"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.76798115429917"/>
-																<Property Name="TrimEnd" Type="Real64" Value="2.73233451118964"/>
+																<Property Name="3DSpatialization" Type="int16" Value="2"/>
 															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ghost_vox_hit.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="273707060"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ghost_vox_hit" ID="{D5801736-7D88-46F4-B4DB-DA19A7451CA5}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ghost_vox_hit_06" ID="{DCBD41EF-249C-42C0-A7DE-A5835E63B068}" ShortID="807363933">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ghost_vox_hit" ID="{739F06FF-0F71-418B-B010-21925DA96C7E}">
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{E6ECD28E-DBB0-4908-B4B3-D0E3C2DA98CA}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0274000049368089"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0822000148104265"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.109600019747235"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.671300120951818"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="836858474"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{EF6841A2-07A8-4618-95CE-C0F4C8592114}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{E6ECD28E-DBB0-4908-B4B3-D0E3C2DA98CA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="ghost_smack_04" ID="{7232DE80-890A-48E7-AD28-5AF7EFC77D3E}" ShortID="335819412">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0535751864939144"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.723265017667845"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.508964271692187"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.66083078131133"/>
+																<Property Name="3DSpatialization" Type="int16" Value="2"/>
 															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ghost_vox_hit.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="865077179"/>
-															</MediaIDList>
-														</AudioFileSource>
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<ObjectRef Name="Ghost" ID="{CA2BBD05-9DDC-4D67-9692-C340A48CFD1A}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{EABAA76A-B989-4F34-BA02-6146DA5FAD05}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0411000074052126"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0959000172788311"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="9.41190169579383"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="9.86400177725118"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="973742346"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{36DCCC3D-4988-499C-A531-563D9D8C5792}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="202398-EFX_INT_Face_Body_Punch_Clean_01" ID="{EABAA76A-B989-4F34-BA02-6146DA5FAD05}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ghost_vox_hit" ID="{739F06FF-0F71-418B-B010-21925DA96C7E}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+													<PositioningInfo>
+														<Position Name="" ID="{2F7AE464-58BF-402F-9682-E7AB27A514A9}"/>
+													</PositioningInfo>
+													<ObjectLists>
+														<ObjectList Name="Effects">
+															<Reference>
+																<Local>
+																	<EffectSlot Name="" ID="{788D5CB7-56A7-4F2E-94A1-FC2B9F90F844}" ShortID="270406095">
+																		<ReferenceList>
+																			<Reference Name="Effect">
+																				<Custom>
+																					<Effect Name="Compressor (Custom)" ID="{C12651A6-DB2F-46D4-9DB5-F11010677AF1}" ShortID="964645542" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																						<PropertyList>
+																							<Property Name="OutputGain" Type="Real32" Value="-3.6"/>
+																							<Property Name="ReleaseTime" Type="Real32" Value="0.13"/>
+																							<Property Name="Threshold" Type="Real32" Value="-24.3"/>
+																						</PropertyList>
+																					</Effect>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</EffectSlot>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<EffectSlot Name="" ID="{75463F42-CD60-402E-BA4A-B7DA4246FF7C}" ShortID="835099370">
+																		<ReferenceList>
+																			<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																				<ObjectRef Name="env_attic_verb" ID="{3DE708B2-DE76-401F-ACFA-DFC8E13130D2}" WorkUnitID="{BA60EAFF-7B76-4BB6-BDBF-76915B7058A0}"/>
+																			</Reference>
+																		</ReferenceList>
+																	</EffectSlot>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</RandomSequenceContainer>
 											</ChildrenList>
-										</RandomSequenceContainer>
+										</BlendContainer>
 									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{D8647EEC-5859-44D3-83A5-4D3BC8DEC94F}"/>
+					</PositioningInfo>
 				</ActorMixer>
 				<ActorMixer Name="Objects" ID="{E56D254D-5927-43D9-9A52-65DA53531BEC}" ShortID="62433528">
 					<PropertyList>
