@@ -49,6 +49,11 @@ public class GhostBehaviour : MonoBehaviour
     public GameObject throwable;
     private ObjectBehaviour newSelectedObject;
 
+    //Wwise Audio Variables - Whitney
+    [Header("Wwise Events")]
+    [SerializeField] public AK.Wwise.Event surprise;
+    [SerializeField] public AK.Wwise.Event ghost_hurt;
+
     #region Unity Functions
 
     private void Awake()
@@ -130,6 +135,9 @@ public class GhostBehaviour : MonoBehaviour
         // Start the end of idle
         animator.SetTrigger("suprise");
         StartCoroutine(EndIdle());
+
+        //Audio Trigger
+        surprise.Post(gameObject);
 
     }
 

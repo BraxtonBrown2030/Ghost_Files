@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{99EF6813-3944-46A4-EC65-EF86FC95C21D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3E96CD52-7C0A-1682-02AA-0A0F524B6A62}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -92,7 +92,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{399960DA-9925-7F6D-BB3D-7DC434268237}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{26C11FA0-A900-E05E-7D7C-130D859B2E60}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -141,6 +141,10 @@
 					<ShortName>env_os_squeak_01.wav</ShortName>
 					<CachePath>SFX/env_os_squeak_01_8E324C96.wem</CachePath>
 				</File>
+				<File Id="202396748" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_notice.wav</ShortName>
+					<CachePath>SFX/ghost_vox_notice_DAA414AF.wem</CachePath>
+				</File>
 				<File Id="215610243" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateS_hit_01.wav</ShortName>
 					<CachePath>SFX/item_crateS_hit_01_8E324C96.wem</CachePath>
@@ -170,6 +174,10 @@
 					<ShortName>env_os_hauntcreak_03.wav</ShortName>
 					<CachePath>SFX/env_os_hauntcreak_03_8E324C96.wem</CachePath>
 				</File>
+				<File Id="385144280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_notice.wav</ShortName>
+					<CachePath>SFX/ghost_vox_notice_48B036D1.wem</CachePath>
+				</File>
 				<File Id="387915797" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_05.wav</ShortName>
 					<CachePath>SFX/env_os_rats_05_8E324C96.wem</CachePath>
@@ -181,6 +189,10 @@
 				<File Id="411936919" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateS_hit_02.wav</ShortName>
 					<CachePath>SFX/item_crateS_hit_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="441426318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_notice.wav</ShortName>
+					<CachePath>SFX/ghost_vox_notice_F11D179C.wem</CachePath>
 				</File>
 				<File Id="443385534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_08.wav</ShortName>
@@ -276,6 +288,10 @@
 					<ShortName>card_sm_01.wav</ShortName>
 					<CachePath>SFX/card_sm_01_51A77DAD.wem</CachePath>
 				</File>
+				<File Id="864253955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_notice.wav</ShortName>
+					<CachePath>SFX/ghost_vox_notice_2A358D05.wem</CachePath>
+				</File>
 				<File Id="886952836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_06.wav</ShortName>
 					<CachePath>SFX/env_os_rats_06_8E324C96.wem</CachePath>
@@ -325,6 +341,10 @@
 					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
 					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_4C373A28.wem</CachePath>
 				</File>
+				<File Id="994700634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_summon.wav</ShortName>
+					<CachePath>SFX/ghost_summon_760BDCA8.wem</CachePath>
+				</File>
 				<File Id="1015114399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_04.wav</ShortName>
 					<CachePath>SFX/env_os_rats_04_8E324C96.wem</CachePath>
@@ -340,6 +360,10 @@
 				<File Id="1064107408" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateL_hit_04.wav</ShortName>
 					<CachePath>SFX/item_crateL_hit_04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1066427157" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_notice.wav</ShortName>
+					<CachePath>SFX/ghost_vox_notice_F984BBE9.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -376,7 +400,21 @@
 						<AuxBusRef Id="1802038219" Name="env_fx"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="979070061" Name="ghost_attack" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3830028166" Name="ghost_appear" MaxAttenuation="40" DurationType="OneShot" DurationMin="3.130104" DurationMax="3.130104">
+					<MediaRefs>
+						<MediaRef Id="994700634"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="979070061" Name="ghost_attack" MaxAttenuation="40" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2809720724" Name="ghost_surprise" MaxAttenuation="40" DurationType="OneShot" DurationMin="0.7310636" DurationMax="1.154311">
+					<MediaRefs>
+						<MediaRef Id="202396748"/>
+						<MediaRef Id="385144280"/>
+						<MediaRef Id="441426318"/>
+						<MediaRef Id="864253955"/>
+						<MediaRef Id="1066427157"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2405462070" Name="object_hit_player" MaxAttenuation="40" DurationType="OneShot" DurationMin="0" DurationMax="1.8376367">
 					<AuxBusRefs>
 						<AuxBusRef Id="591668312" Name="objects_fx"/>
@@ -498,5 +536,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F3BA50A8-6C5D-7FF7-364F-86CC6F381C0C}</FileHash>
+	<FileHash>{415BF7B8-BD7C-0FFF-517C-B090B802860E}</FileHash>
 </SoundBanksInfo>
