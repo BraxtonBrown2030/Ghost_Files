@@ -5753,7 +5753,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1437826709}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20002,7 +20002,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 540174168}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -23528,8 +23528,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5160029, y: 0.6553, z: 0.6553}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1888265759}
+  m_Children: []
   m_Father: {fileID: 1222795558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -26655,14 +26654,8 @@ RectTransform:
   m_Children:
   - {fileID: 1451361792}
   - {fileID: 1931175992}
-  - {fileID: 540174168}
-  - {fileID: 1193002288}
-  - {fileID: 1168817039}
   - {fileID: 1040527686}
-  - {fileID: 660695688}
-  - {fileID: 1437826709}
-  - {fileID: 1637108760}
-  m_Father: {fileID: 1200905293}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -28349,7 +28342,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1193002288}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -39730,7 +39723,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 401188764}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HealthBarBehaviour, Assembly-CSharp
         m_MethodName: UpdateHealthBar
         m_Mode: 1
@@ -45349,7 +45342,6 @@ RectTransform:
   m_Children:
   - {fileID: 339622376}
   - {fileID: 1255539252}
-  - {fileID: 1200905293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -47764,7 +47756,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1168817039}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -57617,6 +57609,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30db92cce7a364bd0b4c187108231b11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1993776380}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30db92cce7a364bd0b4c187108231b11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1993776381}
     - targetCorrespondingSourceObject: {fileID: 3638414788905943111, guid: 30db92cce7a364bd0b4c187108231b11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2004800256}
@@ -58129,6 +58124,21 @@ MonoBehaviour:
   isAttacking: 0
   throwable: {fileID: 0}
   blinkTime: 0.3
+  ui_attackIndicatorSmall:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 846db622be6df5940955f4d91aef8154, type: 2}
+  smallIndicator: {fileID: 1222645521}
+  ui_attackIndicatorMed:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 846db622be6df5940955f4d91aef8154, type: 2}
+  medIndicator: {fileID: 1932832351}
+  ui_attackIndicatorLarge:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 846db622be6df5940955f4d91aef8154, type: 2}
+  largeIndicator: {fileID: 1077857161}
 --- !u!1 &2004800255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3638414788905943111, guid: 30db92cce7a364bd0b4c187108231b11, type: 3}
@@ -60112,3 +60122,9 @@ SceneRoots:
   - {fileID: 1109298155}
   - {fileID: 485410703}
   - {fileID: 1401337445}
+  - {fileID: 99240456}
+  - {fileID: 819256329}
+  - {fileID: 1222795558}
+  - {fileID: 1342392692}
+  - {fileID: 1562486039}
+  - {fileID: 1773388142}

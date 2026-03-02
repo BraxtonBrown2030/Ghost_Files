@@ -1539,10 +1539,11 @@
 							<ChildrenList>
 								<Effect Name="Standard" ID="{1A2EAB31-6283-4C0D-89B2-F050DF89D421}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 									<PropertyList>
-										<Property Name="DelayTime" Type="Real32" Value="1"/>
+										<Property Name="DelayTime" Type="Real32" Value="0.2"/>
 										<Property Name="FeedBackLevel" Type="Real32" Value="0.7"/>
 										<Property Name="FeedForwardLevel" Type="Real32" Value="0.7"/>
-										<Property Name="ModDepth" Type="Real32" Value="65"/>
+										<Property Name="ModDepth" Type="Real32" Value="100"/>
+										<Property Name="ModFrequency" Type="Real32" Value="20"/>
 										<Property Name="ModPWM" Type="Real32" Value="0"/>
 										<Property Name="ModWaveform" Type="int32" Value="1"/>
 									</PropertyList>
@@ -1601,10 +1602,9 @@
 						<Effect Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
 								<Property Name="DelayTime" Type="Real32" Value="8.5"/>
-								<Property Name="DryLevel" Type="Real32" Value="0.3"/>
 								<Property Name="FeedBackLevel" Type="Real32" Value="0.9"/>
-								<Property Name="ModDepth" Type="Real32" Value="10"/>
-								<Property Name="ModFrequency" Type="Real32" Value="5.5"/>
+								<Property Name="ModDepth" Type="Real32" Value="8.4"/>
+								<Property Name="ModFrequency" Type="Real32" Value="0.52"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
 							</PropertyList>
 						</Effect>

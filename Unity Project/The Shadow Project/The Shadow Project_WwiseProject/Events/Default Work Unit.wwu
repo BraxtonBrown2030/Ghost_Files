@@ -8,7 +8,7 @@
 						<Action Name="" ID="{4351F386-D96B-4CBA-9DDF-7234380680F5}" ShortID="383794119">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="test_sfx" ID="{C25669A7-156C-464F-9024-9DA34376BC83}" WorkUnitID="{41E1F83B-F130-4671-BCE9-EFC37308F6D5}"/>
+									<ObjectRef Name="test_beep" ID="{97AFE133-4E4C-4D25-86A0-272609A461D7}" WorkUnitID="{41E1F83B-F130-4671-BCE9-EFC37308F6D5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -148,6 +148,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{1A653BCA-AB83-4974-A745-5137C2014781}" ShortID="984559290">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="9"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="UI_AttackIndicatorS" ID="{C256FC78-26C0-4300-A1C7-47091C49FBEB}">
+							<ChildrenList>
+								<Action Name="" ID="{BC451B9F-E31B-4203-9441-4C0A99901901}" ShortID="477916671">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Small" ID="{01C95446-2FFA-46A4-AE43-C2AD609DAC6F}" WorkUnitID="{B962D48D-8DAA-4C05-BACA-1C09989032AF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_AttackIndicatorM" ID="{D3D34853-353F-43C9-842F-E8DE866A9D9C}"/>
+						<Event Name="UI_AttackIndicatorL" ID="{481D5A4E-3B58-4CC2-9785-4EBB78A66EC9}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

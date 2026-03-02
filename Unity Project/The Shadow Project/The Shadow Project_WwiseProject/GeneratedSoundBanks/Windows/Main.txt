@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1697873554	amb_attic_start			\Default Work Unit\Ambience\amb_attic_start	
 	2405462070	object_hit_player			\Default Work Unit\Objects\object_hit_player	
 	2809720724	ghost_surprise			\Default Work Unit\Enemies\ghost_surprise	
+	3483086956	UI_AttackIndicatorS			\Default Work Unit\UI\UI_AttackIndicatorS	
 	3830028166	ghost_appear			\Default Work Unit\Enemies\ghost_appear	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -29,6 +30,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	50860831	env_os_hauntcreak_05	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\env_os_hauntcreak_05_8E324C96.wem		\Actor-Mixer Hierarchy\World\Ambience\One Shots\env_hauntcreak\env_os_hauntcreak_05		86446
 	76659355	env_os_rats_03	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\env_os_rats_03_8E324C96.wem		\Actor-Mixer Hierarchy\World\Ambience\One Shots\env_rats\env_os_rats_03		5707
 	93618431	card_L_02	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\card_L_02_C5D48472.wem		\Actor-Mixer Hierarchy\World\Objects\Item_Hits\Item_Type\Cardboard_Hits\Cardboard_Hits_large\card_L_02		10693
+	105318634	UI_Small	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\1155313.audio-UI-Click-Small_Tremor-VADI_B5DE2BB1.wem		\Actor-Mixer Hierarchy\Non-World\UI\UI_Small		5478
 	118384836	env_os_rats_02	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\env_os_rats_02_8E324C96.wem		\Actor-Mixer Hierarchy\World\Ambience\One Shots\env_rats\env_os_rats_02		9998
 	130462557	env_os_hauntcreak_04	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\env_os_hauntcreak_04_899746C0.wem		\Actor-Mixer Hierarchy\World\Ambience\One Shots\env_hauntcreak\env_os_hauntcreak_04		105118
 	152270630	card_sm_02	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Windows\SFX\card_sm_02_0FC14F66.wem		\Actor-Mixer Hierarchy\World\Objects\Item_Hits\Item_Type\Cardboard_Hits\Cardboard_Hits_small\card_sm_02		9985

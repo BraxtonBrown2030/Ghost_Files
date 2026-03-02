@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Sound Name="test_sfx" ID="{C25669A7-156C-464F-9024-9DA34376BC83}" ShortID="493830057">
 					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
@@ -36,6 +41,30 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Pause" ID="{A3FC0D0B-EB1E-44DA-B14D-BD65A5F98222}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="test_beep" ID="{97AFE133-4E4C-4D25-86A0-272609A461D7}" ShortID="424413758">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Sine" ID="{BB84AF38-428A-4E7A-AB74-996392F6616A}" ShortID="923051421" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+							<PropertyList>
+								<Property Name="SineDuration" Type="Real32" Value="0.2"/>
+							</PropertyList>
+							<Language>English(US)</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Sine" ID="{BB84AF38-428A-4E7A-AB74-996392F6616A}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

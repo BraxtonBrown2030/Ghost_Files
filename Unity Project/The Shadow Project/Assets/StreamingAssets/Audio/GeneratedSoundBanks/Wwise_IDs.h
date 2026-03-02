@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID GHOST_SURPRISE = 2809720724U;
         static const AkUniqueID OBJECT_HIT_PLAYER = 2405462070U;
         static const AkUniqueID TEST_EVENT = 4258653052U;
+        static const AkUniqueID UI_ATTACKINDICATORS = 3483086956U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -84,6 +85,7 @@ namespace AK
     {
         static const AkUniqueID ENV_FX = 1802038219U;
         static const AkUniqueID OBJECTS_FX = 591668312U;
+        static const AkUniqueID UI_FX = 1919201456U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

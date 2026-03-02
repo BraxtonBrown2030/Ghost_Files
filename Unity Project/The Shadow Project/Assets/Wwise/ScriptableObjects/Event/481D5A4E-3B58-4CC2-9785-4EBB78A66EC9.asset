@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d97fc811f1f4a8d8a6d3ee74b8d2, type: 3}
+  m_Name: 481D5A4E-3B58-4CC2-9785-4EBB78A66EC9
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: UI_AttackIndicatorL
+  id: 3483086963
+  guid: 481D5A4E-3B58-4CC2-9785-4EBB78A66EC9
