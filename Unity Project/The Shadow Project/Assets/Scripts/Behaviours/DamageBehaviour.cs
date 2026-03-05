@@ -20,16 +20,11 @@ public class DamageBehaviour : MonoBehaviour
     public float delayTime = 0.2f;
     public void OnTriggerEnter(Collider other)
     {
-		Debug.Log(other.name);
         ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
 		ResetObjectBehaviour resetBehaviour = other.GetComponent<ResetObjectBehaviour>();
 	if(resetBehaviour == null)
 	{
 		Debug.Log("no behaviour found");
-	}
-	else
-	{
-		Debug.Log("we cool");
 	}
 		if (this.gameObject.CompareTag("Ghost"))
 		{
@@ -42,23 +37,17 @@ public class DamageBehaviour : MonoBehaviour
 				resetBehaviour.Reset();
 				StartCoroutine(DelayEvent());
 			}
-			else
-            {
-                
-            }
 		}
         else if (other.CompareTag("Object"))
         {
             
             if (objectBehaviour == null)
             {
-				Debug.Log("object not found");
                 return;
             }
 
             if (isBody == false && objectBehaviour.returnable == true)
             {
-				Debug.Log("Return");
                 OnReturn.Invoke();
                 ObjectBehaviour block = other.GetComponent<ObjectBehaviour>();
                 //block.OnReturn();

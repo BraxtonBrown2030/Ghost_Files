@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Object
   - Ghost
+  - Hand
+  - Main
+  - JoinTrigger
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - SystemUI
   - 
   - 
   - 

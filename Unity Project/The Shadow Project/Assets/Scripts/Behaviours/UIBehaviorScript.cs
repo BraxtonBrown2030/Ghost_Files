@@ -23,6 +23,14 @@ public class UIBehaviorScript : MonoBehaviour
     [HideInInspector] public GameObject throwable;
     [SerializeField] private float blinkTime = 0.2f;
 
+    //Wwise Audio Trigger
+    [Header("Audio Settings")]
+    public AK.Wwise.Event ui_attackIndicatorSmall;
+        public GameObject smallIndicator;
+    public AK.Wwise.Event ui_attackIndicatorMed;
+        public GameObject medIndicator;
+    public AK.Wwise.Event ui_attackIndicatorLarge;
+        public GameObject largeIndicator;
 
 
     void Start()
@@ -56,18 +64,24 @@ public class UIBehaviorScript : MonoBehaviour
                     print("Attack");
                     meshRendererSmall.enabled = true;
                     textSmall.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorSmall.Post(smallIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererSmall.enabled = false;
                     textSmall.enabled = false;
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererSmall.enabled = true;
                     textSmall.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorSmall.Post(smallIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererSmall.enabled = false;
                     textSmall.enabled = false;
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererSmall.enabled = true;
                     textSmall.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorSmall.Post(smallIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererSmall.enabled = false;
                     textSmall.enabled = false;
@@ -84,18 +98,24 @@ public class UIBehaviorScript : MonoBehaviour
                     print("Attack");
                     meshRendererMedium.enabled = true;
                     textMedium.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorMed.Post(medIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererMedium.enabled = false;
                     textMedium.enabled = false;
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererMedium.enabled = true;
                     textMedium.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorMed.Post(medIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererMedium.enabled = false;
                     textMedium.enabled = false;
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererMedium.enabled = true;
                     textMedium.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorMed.Post(medIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererMedium.enabled = false;
                     textMedium.enabled = false;
@@ -112,18 +132,24 @@ public class UIBehaviorScript : MonoBehaviour
                     print("Attack");
                     meshRendererLarge.enabled = true;
                     textLarge.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorLarge.Post(largeIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererLarge.enabled = false;
                     textLarge.enabled = false;
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererLarge.enabled = true;
                     textLarge.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorLarge.Post(largeIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererLarge.enabled = false;
                     textLarge.enabled = false;
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererLarge.enabled = true;
                     textLarge.enabled = true;
+                //Wwise Audio Trigger
+                ui_attackIndicatorLarge.Post(largeIndicator);
                     yield return new WaitForSeconds(blinkTime);
                     meshRendererLarge.enabled = false;
                     textLarge.enabled = false;
