@@ -2368,6 +2368,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="Item_Hits" ID="{E02E3056-C086-4199-BFD7-EB0E4172F44F}" ShortID="773773680">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
@@ -2378,6 +2385,18 @@
 							</ReferenceList>
 							<ChildrenList>
 								<SwitchContainer Name="Item_Type" ID="{1B230FDA-B2D3-4D68-8B0C-1F9AE7E0B3CD}" ShortID="623643472">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>

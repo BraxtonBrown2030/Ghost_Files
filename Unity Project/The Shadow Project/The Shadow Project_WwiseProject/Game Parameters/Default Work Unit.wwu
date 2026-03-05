@@ -3,16 +3,49 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{27988E56-0875-482A-9590-A62A09216607}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="ghost_health" ID="{9D0B9EE3-2A58-42CE-B590-21E7D7624BAE}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="player_health" ID="{DA3BE5BE-BE05-477E-8DAB-098B5E6F8019}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
-					</PropertyList>
-				</GameParameter>
+				<Folder Name="Health" ID="{F9BACCDC-9AAD-4053-9FA4-3A49B55A9578}" ShortID="129922241">
+					<ChildrenList>
+						<GameParameter Name="ghost_health" ID="{9D0B9EE3-2A58-42CE-B590-21E7D7624BAE}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="player_health" ID="{DA3BE5BE-BE05-477E-8DAB-098B5E6F8019}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Settings" ID="{F3772FA0-670E-46B7-B589-7BE0F7B8F46F}" ShortID="103994027">
+					<ChildrenList>
+						<GameParameter Name="vol_ambience" ID="{C3AA294E-7B5E-4A22-9E02-226ECC249229}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="90"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="vol_UI" ID="{B8B5DDE6-43AF-4D1B-BDDE-668AFA2B560D}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="90"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="vol_music" ID="{E5E4F827-A9B1-44AE-81AC-181039C39AC7}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="vol_master" ID="{1DDFEA94-CE95-4F85-92B0-21E808C751C4}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="vol_sfx" ID="{654E149A-67A6-4598-BC66-7932FBAA8317}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="90"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

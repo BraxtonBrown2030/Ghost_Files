@@ -96,7 +96,28 @@
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="vol_music" ID="{E5E4F827-A9B1-44AE-81AC-181039C39AC7}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="vol_sfx" ID="{654E149A-67A6-4598-BC66-7932FBAA8317}"/>
+							<Value>90</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="vol_ambience" ID="{C3AA294E-7B5E-4A22-9E02-226ECC249229}"/>
+							<Value>90</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="vol_UI" ID="{B8B5DDE6-43AF-4D1B-BDDE-668AFA2B560D}"/>
+							<Value>55.6556556556557</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="vol_master" ID="{1DDFEA94-CE95-4F85-92B0-21E808C751C4}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>

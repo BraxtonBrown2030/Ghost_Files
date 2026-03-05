@@ -9,12 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CA2F62C4-6FDF-4243-FFEB-37FA92809276}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9AA8869F-A44C-A83F-DE59-5ACEFE67B32E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="992902880" Name="Small_Tiled_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2568359573" Name="Secret_message" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="3552193294" Name="env_attic_verb" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
@@ -49,6 +50,13 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="1919201456" Name="UI_fx">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2568359573"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="180621091" Name="ghost_health"/>
@@ -75,24 +83,25 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{79834029-20A1-7EF6-AA29-F669E707C58F}">
+		<SoundBank Id="3157003241" Type="User" Language="English(US)" Hash="{D2A39AC4-CD1B-9418-CF2F-D1C9251C9916}">
 			<ShortName>test</ShortName>
-			<Path>test.bnk</Path>
-			<Media>
-				<File Id="762578400" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Pause.wav</ShortName>
-					<CachePath>SFX/Pause_7B654C33.wem</CachePath>
-				</File>
-			</Media>
+			<Path>English(US)/test.bnk</Path>
+			<Plugins>
+				<Custom>
+					<Plugin Id="923051421" Name="Sine" LibName="Wwise Sine" LibId="6553602"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="4258653052" Name="test_event" DurationType="OneShot" DurationMin="0.629499" DurationMax="0.629499">
-					<MediaRefs>
-						<MediaRef Id="762578400"/>
-					</MediaRefs>
+				<Event Id="4258653052" Name="test_event" DurationType="OneShot" DurationMin="0.2" DurationMax="0.2">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="923051421"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{26C11FA0-A900-E05E-7D7C-130D859B2E60}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3F492880-9BAC-988E-1F7C-24564A2DDA0C}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -111,6 +120,10 @@
 				<File Id="93618431" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>card_L_02.wav</ShortName>
 					<CachePath>SFX/card_L_02_C5D48472.wem</CachePath>
+				</File>
+				<File Id="105318634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>1155313.audio-UI-Click-Small_Tremor-VADI.wav</ShortName>
+					<CachePath>SFX/1155313.audio-UI-Click-Small_Tremor-VADI_B5DE2BB1.wem</CachePath>
 				</File>
 				<File Id="118384836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_02.wav</ShortName>
@@ -513,6 +526,14 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="3483086956" Name="UI_AttackIndicatorS" DurationType="OneShot" DurationMin="0.24970828" DurationMax="0.24970828">
+					<MediaRefs>
+						<MediaRef Id="105318634"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1919201456" Name="UI_fx"/>
+					</AuxBusRefs>
+				</Event>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="1281648863" Name="item_type">
@@ -536,5 +557,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B6660DCF-4C25-E68A-7A0A-BB2263C9D1EF}</FileHash>
+	<FileHash>{180A3E19-8DE2-739C-9A88-EE3AFBEEFAEE}</FileHash>
 </SoundBanksInfo>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4258653052	test_event			\Default Work Unit\test_event	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	923051421	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\test_beep\Sine	
+
