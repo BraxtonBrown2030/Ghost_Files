@@ -38,7 +38,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
-				<SoundcasterSession Name="Ambience" ID="{C431A19E-AF5E-4C2F-A5EC-51A4446564E5}">
+				<SoundcasterSession Name="Attic Ambience" ID="{C431A19E-AF5E-4C2F-A5EC-51A4446564E5}">
 					<ModuleList>
 						<Module>
 							<ObjectRef Name="amb_attic_start" ID="{DB3D22F6-C980-463D-B4B6-422D11971061}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}"/>
@@ -123,6 +123,38 @@
 						<CurrentSwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>
 						<CurrentSwitchRef Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
 					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Cellar Ambience" ID="{0072249D-3403-4928-B9D1-30F444BBFF1F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="amb_cellar_start" ID="{6684EF0A-F8E6-4606-B54B-BDC9B07FFA8F}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_waterdrips" ID="{1EE34061-7308-4456-AB9A-0E089FD0D338}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_waterdrops" ID="{C22A9A32-5CF0-4A16-AAAD-3C7342D1D52F}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_centerfill" ID="{211CEB88-80D3-4EE6-8FED-115D2190A49D}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_cellar" ID="{DEB27943-22FA-473D-8C1D-AFCDAE774DFC}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="vol_ambience" ID="{C3AA294E-7B5E-4A22-9E02-226ECC249229}"/>
+							<Value>90</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

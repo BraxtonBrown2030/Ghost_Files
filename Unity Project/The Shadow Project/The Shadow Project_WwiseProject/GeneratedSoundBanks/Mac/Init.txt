@@ -1,5 +1,10 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	215992295	player_health			\Default Work Unit\player_health	
+	215992295	player_health			\Default Work Unit\Health\player_health	
+	1004648580	vol_music			\Default Work Unit\Settings\vol_music	
+	2442501159	vol_ambience			\Default Work Unit\Settings\vol_ambience	
+	2747843521	vol_UI			\Default Work Unit\Settings\vol_UI	
+	3273357900	vol_sfx			\Default Work Unit\Settings\vol_sfx	
+	3391499625	vol_master			\Default Work Unit\Settings\vol_master	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\World\Ambience	

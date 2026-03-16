@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AMB_ATTIC_START = 1697873554U;
+        static const AkUniqueID AMB_ATTIC_STOP = 4094362442U;
+        static const AkUniqueID AMB_CELLAR_START = 1414323786U;
         static const AkUniqueID GHOST_APPEAR = 3830028166U;
         static const AkUniqueID GHOST_ATTACK = 979070061U;
         static const AkUniqueID GHOST_SURPRISE = 2809720724U;
@@ -58,6 +60,11 @@ namespace AK
     {
         static const AkUniqueID GHOST_HEALTH = 180621091U;
         static const AkUniqueID PLAYER_HEALTH = 215992295U;
+        static const AkUniqueID VOL_AMBIENCE = 2442501159U;
+        static const AkUniqueID VOL_MASTER = 3391499625U;
+        static const AkUniqueID VOL_MUSIC = 1004648580U;
+        static const AkUniqueID VOL_SFX = 3273357900U;
+        static const AkUniqueID VOL_UI = 2747843521U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
