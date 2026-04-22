@@ -45,7 +45,7 @@ public class UIBehaviorScript : MonoBehaviour
 
     public void StartIndicator()
     {
-        print("hehe");
+        //print("hehe");
         isAttacking = true;
         StartCoroutine(AttackIndicator());
     }
@@ -61,7 +61,7 @@ public class UIBehaviorScript : MonoBehaviour
                 indicatorSmall.transform.position = follow.transform.position + (follow.transform.forward * zoffset);
                 while (isAttacking == true)
                 {
-                    print("Attack");
+                    //print("Attack");
                     meshRendererSmall.enabled = true;
                     textSmall.enabled = true;
                 //Wwise Audio Trigger
@@ -95,7 +95,7 @@ public class UIBehaviorScript : MonoBehaviour
                 indicatorMedium.transform.position = follow.transform.position + (follow.transform.forward * zoffset);
                 while (isAttacking == true)
                 {
-                    print("Attack");
+                    //print("Attack");
                     meshRendererMedium.enabled = true;
                     textMedium.enabled = true;
                 //Wwise Audio Trigger
@@ -129,7 +129,7 @@ public class UIBehaviorScript : MonoBehaviour
                 indicatorLarge.transform.position = follow.transform.position + (follow.transform.forward * zoffset);
                 while (isAttacking == true)
                 {
-                    print("Attack");
+                    //print("Attack");
                     meshRendererLarge.enabled = true;
                     textLarge.enabled = true;
                 //Wwise Audio Trigger

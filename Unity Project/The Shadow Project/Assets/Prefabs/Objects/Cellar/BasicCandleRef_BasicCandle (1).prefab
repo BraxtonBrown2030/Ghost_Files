@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1189606848708359326}
   - component: {fileID: 6804681788546111087}
   - component: {fileID: 3275592342624926229}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,9 +105,9 @@ GameObject:
   - component: {fileID: 8073889023257696385}
   - component: {fileID: -6052592332492010244}
   - component: {fileID: -1113591163594706354}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BasicCandleRef_BasicCandle (1)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &-1113591163594706354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ GameObject:
   - component: {fileID: 8831568710414113377}
   - component: {fileID: 603874752729023310}
   - component: {fileID: 2814977960709368347}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle2_WickCandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +377,7 @@ GameObject:
   - component: {fileID: 4447452161775586889}
   - component: {fileID: 4969379410823956084}
   - component: {fileID: 3548054470828648406}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +466,7 @@ GameObject:
   - component: {fileID: 8873119347913592332}
   - component: {fileID: 1967061850225128296}
   - component: {fileID: 6312315751551652906}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Candle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +556,7 @@ GameObject:
   - component: {fileID: 1504372831918567109}
   - component: {fileID: 9133880477452326517}
   - component: {fileID: 1135917479004841686}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle2_Candle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3057174036391149929}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +680,7 @@ GameObject:
   - component: {fileID: 7330927575674200852}
   - component: {fileID: 5724542002250169964}
   - component: {fileID: 121178709514528198}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Candle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

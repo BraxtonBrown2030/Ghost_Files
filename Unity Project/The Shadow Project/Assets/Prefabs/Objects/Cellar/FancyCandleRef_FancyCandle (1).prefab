@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 377343674834919974}
   - component: {fileID: 3811382938774493290}
   - component: {fileID: 4160964749031175655}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Candle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 5543243667975976336}
   - component: {fileID: 4106099253772200502}
   - component: {fileID: 661538544222895565}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Candle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8153805637272539808}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candles1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,9 +230,9 @@ GameObject:
   - component: {fileID: 9042471308928523775}
   - component: {fileID: 8514276761243788061}
   - component: {fileID: 7326236773612805276}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: FancyCandleRef_FancyCandle (1)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,6 +380,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &7326236773612805276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -412,7 +413,7 @@ GameObject:
   - component: {fileID: 2374963094652525165}
   - component: {fileID: 2790715603276737411}
   - component: {fileID: 2776471146858928386}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +502,7 @@ GameObject:
   - component: {fileID: 9037343197413727384}
   - component: {fileID: 2297382311678230240}
   - component: {fileID: 9018598054800272260}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle2_Candle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +592,7 @@ GameObject:
   - component: {fileID: 5134940550557712478}
   - component: {fileID: 1825302893447117467}
   - component: {fileID: 6607855970211087846}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle2_WickCandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +681,7 @@ GameObject:
   - component: {fileID: 892829098046504705}
   - component: {fileID: 6962792424459122883}
   - component: {fileID: 4890949724182827542}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
