@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class CollisionBehaviour : MonoBehaviour
 {
     public UnityEvent onCollisionEnter;
+    public ObjectBehaviour objectBehaviour;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -12,7 +13,8 @@ public class CollisionBehaviour : MonoBehaviour
             GhostBehaviour ghost = other.GetComponentInParent<GhostBehaviour>();
             ghost.waiting = false;
             ghost.StartCoroutine(ghost.Throw());
-
+            objectBehaviour = GetComponent<ObjectBehaviour>();
+            objectBehaviour.thrown = true;
         }
         
         onCollisionEnter.Invoke();

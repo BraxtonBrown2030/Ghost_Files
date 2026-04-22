@@ -7,5 +7,6 @@ public class ActivateBehaviour : MonoBehaviour
     {
         ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
         objectBehaviour.enabled = true;
+        Debug.Log("Done");
     }
 }
