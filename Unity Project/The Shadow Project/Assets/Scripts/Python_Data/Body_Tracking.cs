@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Body_Tracking : MonoBehaviour
 {
@@ -14,8 +15,11 @@ public class Body_Tracking : MonoBehaviour
 
     public List<BodySet> sets = new List<BodySet>();   // Expect 4 sets
     public float scale = 0.01f;
+    public float minScale = 0.0001f;
+    public float maxScale = 10f;
     public Vector3 offset;
     public float timeout = 0.5f;
+
 
     private float[] lastUpdate; 
     private Vector3[][] restPositions;
@@ -103,5 +107,42 @@ public class Body_Tracking : MonoBehaviour
                 }
             }
         }
+    }
+
+
+
+    // Slider Value
+    public void SetScaleFloat(float v)
+    {
+        scale = Mathf.Clamp(v, minScale, maxScale);
+       
+        
+    }
+    
+    // 
+    public void SetScaleFromInputField()
+    {
+        var es = UnityEngine.EventSystems.EventSystem.current;
+        var go = es != null ? es.currentSelectedGameObject : null;
+        if (go == null)
+            return;
+
+        string inputText = null;
+        var legacy = go.GetComponent<UnityEngine.UI.InputField>();
+        if (legacy != null) inputText = legacy.text;
+        else
+        {
+            var tmp = go.GetComponent<TMPro.TMP_InputField>();
+            if (tmp != null) inputText = tmp.text;
+        }
+
+        if (string.IsNullOrEmpty(inputText))
+            return;
+
+        if (float.TryParse(inputText, out float v))
+        {
+            scale = Mathf.Clamp(v, minScale, maxScale);
+        }
+
     }
 }
