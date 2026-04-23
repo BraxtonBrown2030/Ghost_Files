@@ -59,8 +59,21 @@ public class ThrowObjectBehavior : MonoBehaviour
     public void Levitate(GameObject throwable, float speed)
     {
         
-        
+
+        if (currentThrows.TryGetValue(throwable, out Coroutine existing))
+        {
+
+            StopCoroutine(existing);
+            currentThrows.Remove(throwable);
+
+        }
+
+		ResetObjectBehaviour resetBehaviour = throwable.GetComponent<ResetObjectBehaviour>();
+
+
         Coroutine newThrow = StartCoroutine(MoveOverTimeLev(throwable, handLocation.position, speed));
+        currentThrows[throwable] = newThrow;
+        
         
     }
     public void EndThrow(GameObject throwable)

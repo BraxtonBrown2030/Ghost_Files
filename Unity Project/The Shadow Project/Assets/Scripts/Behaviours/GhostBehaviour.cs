@@ -44,7 +44,7 @@ public class GhostBehaviour : MonoBehaviour
 
     [Header("Info")]
     [SerializeField] private Quaternion rotation;
-    [SerializeField] public bool isWandering = false, isDrifting = false, isAttacking = false, waiting = false;
+    [SerializeField] public bool isWandering = false, isDrifting = false, isAttacking = false, waiting = false, noSceneChange = true;
 
     [SerializeField] public List<TransformDataList> players;
 
@@ -247,7 +247,11 @@ public class GhostBehaviour : MonoBehaviour
 	{
 		yield return new WaitForSeconds(2);
 		string sceneName = SceneManager.GetActiveScene().name;
-		if(sceneName == "MainScene")
+		if(noSceneChange == true)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+		}	
+		else if(sceneName == "MainScene")
 		{
 			SceneManager.LoadScene("CellarScene 1");
 		}
