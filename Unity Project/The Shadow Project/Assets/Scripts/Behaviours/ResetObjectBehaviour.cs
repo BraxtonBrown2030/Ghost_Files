@@ -5,7 +5,9 @@ public class ResetObjectBehaviour : MonoBehaviour
 {
     public void StartTimeDestroy()
     {
+		Debug.Log("Done deal pt.1");	
         StartCoroutine(TimeDestroy());
+		Debug.Log("Done deal");
     }
     IEnumerator TimeDestroy()
     {

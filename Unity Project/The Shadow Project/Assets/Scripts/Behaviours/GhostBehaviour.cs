@@ -260,7 +260,7 @@ public class GhostBehaviour : MonoBehaviour
     public void ThrowObject(GameObject throwable, Vector3 newLocation)
     {
         // Being Linear Throw to location
-        throwManager.StartCoroutine(throwManager.MoveOverTime(throwable, newLocation, throwSpeed));
+        throwManager.StartThrow(throwable, newLocation, throwSpeed);
     }
     public void LevitateObject(GameObject throwable)
     {

@@ -26,7 +26,7 @@ public class ThrowableReturnBehavior : MonoBehaviour
                 Debug.Log('4');
                 // Start Return Throw
                 objectBehaviour.returned = true;
-                throwObjectManager.StartThrow(objectBehaviour.gameObject, target.position, objectBehaviour.throwSpeed);
+                throwObjectManager.StartPlayerThrow(objectBehaviour.gameObject, target.position, objectBehaviour.throwSpeed);
                 Debug.Log('5');
                 //Wwise Audio Trigger
                 playerDeflect.Post(gameObject);

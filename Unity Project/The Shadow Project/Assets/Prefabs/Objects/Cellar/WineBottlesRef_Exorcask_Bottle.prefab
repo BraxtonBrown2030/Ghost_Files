@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: -7107216288473292643}
   - component: {fileID: 783037809532750049}
   - component: {fileID: 8106009674752274042}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Bottle
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &8106009674752274042
 BoxCollider:
   m_ObjectHideFlags: 0

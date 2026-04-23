@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7684336726238247433}
   - component: {fileID: 7247017925747194312}
   - component: {fileID: 8223442130014096948}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Broken_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 3182685171108841731}
   - component: {fileID: 3357485740670379466}
   - component: {fileID: 8799152062494920959}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Broken_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,9 +197,9 @@ GameObject:
   - component: {fileID: -3827636375276334304}
   - component: {fileID: 2527951351372814433}
   - component: {fileID: 6542036444899356016}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Broken
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,6 +295,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &6542036444899356016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ GameObject:
   - component: {fileID: 7963195942738840191}
   - component: {fileID: 3287450685641637758}
   - component: {fileID: 7428492867542115400}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Broken_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +418,7 @@ GameObject:
   - component: {fileID: 5594315435562196782}
   - component: {fileID: 1817569713188753957}
   - component: {fileID: 6982987634491162461}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Broken_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +507,7 @@ GameObject:
   - component: {fileID: 7725077038494984489}
   - component: {fileID: 4857777036908681232}
   - component: {fileID: 8566103815527586204}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Exorcask_Broken_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

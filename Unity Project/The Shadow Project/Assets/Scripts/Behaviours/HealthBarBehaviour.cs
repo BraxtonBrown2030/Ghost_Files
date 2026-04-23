@@ -61,6 +61,7 @@ public class HealthBarBehaviour : MonoBehaviour
 	
     public void RunUpdateSlider()
     {
+        Debug.Log("Healthbars be sliding");
         StartCoroutine(UpdateSlider());
 		StartCoroutine(UpdateEaseSlider());
     }//End RunUpdateSlider
@@ -72,8 +73,6 @@ public class HealthBarBehaviour : MonoBehaviour
             slider.value = Mathf.MoveTowards(slider.value, health.value, Time.deltaTime * updateSpeed);
             yield return null;
         }//end while
-
-        Debug.Log("it worked");
     }//end UpdateSlider
 
 	private IEnumerator UpdateEaseSlider()
@@ -83,7 +82,5 @@ public class HealthBarBehaviour : MonoBehaviour
             easeSlider.value = Mathf.MoveTowards(easeSlider.value, health.value, Time.deltaTime * updateEaseSpeed);
             yield return null;
         }//end while
-
-        Debug.Log("it worked");
     }//end UpdateSlider
 }//end class

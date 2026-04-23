@@ -9,6 +9,7 @@ TagManager:
   - Hand
   - Main
   - JoinTrigger
+  - boundary
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - Player
   - SystemUI
-  - 
-  - 
+  - object
+  - boundary
   - 
   - 
   - 
