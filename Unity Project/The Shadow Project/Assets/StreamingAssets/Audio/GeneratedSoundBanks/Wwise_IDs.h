@@ -18,8 +18,10 @@ namespace AK
         static const AkUniqueID AMB_CELLAR_START = 1414323786U;
         static const AkUniqueID GHOST_APPEAR = 3830028166U;
         static const AkUniqueID GHOST_ATTACK = 979070061U;
+        static const AkUniqueID GHOST_DAMAGE = 2585212826U;
         static const AkUniqueID GHOST_SURPRISE = 2809720724U;
         static const AkUniqueID OBJECT_HIT_PLAYER = 2405462070U;
+        static const AkUniqueID PLAYER_DEFLECT = 1303326062U;
         static const AkUniqueID TEST_EVENT = 4258653052U;
         static const AkUniqueID UI_ATTACKINDICATORS = 3483086956U;
     } // namespace EVENTS

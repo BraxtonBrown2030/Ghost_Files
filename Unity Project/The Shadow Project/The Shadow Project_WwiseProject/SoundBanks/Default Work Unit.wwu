@@ -12,7 +12,9 @@
 				</SoundBank>
 				<SoundBank Name="Main" ID="{97BE2A10-072E-4E42-8330-8A95013490C3}">
 					<ObjectInclusionList>
+						<ObjectRef Name="player_deflect" ID="{E56814F1-F54B-4191-A4A0-99D0EB9C273F}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI_AttackIndicatorS" ID="{C256FC78-26C0-4300-A1C7-47091C49FBEB}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ghost_damage" ID="{1E3ED2D4-CA01-4360-8F05-74000BF61688}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="amb_attic_stop" ID="{B2EEFB92-CE11-444E-B2AC-F6B96B543D95}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="amb_cellar_start" ID="{6684EF0A-F8E6-4606-B54B-BDC9B07FFA8F}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="amb_attic_start" ID="{DB3D22F6-C980-463D-B4B6-422D11971061}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}" Origin="Manual" Filter="7"/>
