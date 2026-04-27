@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1D3E67FA-5AAB-3AC3-B294-A8E289494904}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FD3348E8-219A-FC4B-C255-D68390FAA9AD}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -107,7 +107,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{97B5A47B-F9EF-8BD7-3706-0DCC421F2560}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EDD2A917-9D71-70BC-5EDF-028BACAACD19}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -139,6 +139,10 @@
 					<ShortName>card_L_02.wav</ShortName>
 					<CachePath>SFX/card_L_02_ABB51C32.wem</CachePath>
 				</File>
+				<File Id="99372517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_04.wav</ShortName>
+					<CachePath>SFX/player_deflect_04_9C8B1DBD.wem</CachePath>
+				</File>
 				<File Id="105318634" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>1155313.audio-UI-Click-Small_Tremor-VADI.wav</ShortName>
 					<CachePath>SFX/1155313.audio-UI-Click-Small_Tremor-VADI_C769F8F1.wem</CachePath>
@@ -165,7 +169,7 @@
 				</File>
 				<File Id="143728209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_bottle_hit_01.wav</ShortName>
-					<CachePath>SFX/item_bottle_hit_01_F5E584F9.wem</CachePath>
+					<CachePath>SFX/item_bottle_hit_01_F4B2A193.wem</CachePath>
 				</File>
 				<File Id="147449458" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>env_loop_morgue.wav</ShortName>
@@ -186,15 +190,19 @@
 				</File>
 				<File Id="163962946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_15.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_15_5528A016.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_15_8D70E41D.wem</CachePath>
 				</File>
 				<File Id="188725517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_11.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_11_322102B2.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_11_9A741F8A.wem</CachePath>
 				</File>
 				<File Id="191743886" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_13.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_13_D695668B.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_13_2A26CC97.wem</CachePath>
+				</File>
+				<File Id="196917997" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_hit.wav</ShortName>
+					<CachePath>SFX/ghost_vox_hit_7528ACF1.wem</CachePath>
 				</File>
 				<File Id="199084632" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_drip_03.wav</ShortName>
@@ -233,6 +241,14 @@
 					<Path>Media/254467704.wem</Path>
 					<CachePath>SFX/env_loop_wind_02_D9B786A0.wem</CachePath>
 				</File>
+				<File Id="273707060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_hit.wav</ShortName>
+					<CachePath>SFX/ghost_vox_hit_24D2B870.wem</CachePath>
+				</File>
+				<File Id="278030697" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_hit.wav</ShortName>
+					<CachePath>SFX/ghost_vox_hit_A483ED3D.wem</CachePath>
+				</File>
 				<File Id="286244852" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_hauntcreak_01.wav</ShortName>
 					<CachePath>SFX/env_os_hauntcreak_01_0D1EB3D6.wem</CachePath>
@@ -247,11 +263,11 @@
 				</File>
 				<File Id="326218597" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_12.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_12_776B8C30.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_12_5806940F.wem</CachePath>
 				</File>
 				<File Id="359024133" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_bottle_hit_04.wav</ShortName>
-					<CachePath>SFX/item_bottle_hit_04_C29E3BF5.wem</CachePath>
+					<CachePath>SFX/item_bottle_hit_04_07B8F540.wem</CachePath>
 				</File>
 				<File Id="366896990" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>520458-CANDLE_DROP_4.wav</ShortName>
@@ -275,11 +291,19 @@
 				</File>
 				<File Id="397562797" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_10.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_10_BDAB5732.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_10_91DAA44F.wem</CachePath>
+				</File>
+				<File Id="403673127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_hit.wav</ShortName>
+					<CachePath>SFX/ghost_vox_hit_81820577.wem</CachePath>
 				</File>
 				<File Id="411936919" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateS_hit_02.wav</ShortName>
 					<CachePath>SFX/item_crateS_hit_02_0D1EB3D6.wem</CachePath>
+				</File>
+				<File Id="420572592" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_06.wav</ShortName>
+					<CachePath>SFX/player_deflect_06_0E406F72.wem</CachePath>
 				</File>
 				<File Id="441426318" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ghost_vox_notice.wav</ShortName>
@@ -288,6 +312,10 @@
 				<File Id="443385534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_08.wav</ShortName>
 					<CachePath>SFX/env_os_rats_08_0D1EB3D6.wem</CachePath>
+				</File>
+				<File Id="445232177" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_03.wav</ShortName>
+					<CachePath>SFX/player_deflect_03_7A9A9A1F.wem</CachePath>
 				</File>
 				<File Id="454060314" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateL_hit_01.wav</ShortName>
@@ -303,7 +331,7 @@
 				</File>
 				<File Id="491661421" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_14.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_14_4C280B60.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_14_981EDC9C.wem</CachePath>
 				</File>
 				<File Id="496235049" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
@@ -315,11 +343,11 @@
 				</File>
 				<File Id="516078319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_18.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_18_F3916CCD.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_18_D2ED0F94.wem</CachePath>
 				</File>
 				<File Id="519045549" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_glass_scatter_16.wav</ShortName>
-					<CachePath>SFX/item_glass_scatter_16_6332F271.wem</CachePath>
+					<CachePath>SFX/item_glass_scatter_16_2D47419C.wem</CachePath>
 				</File>
 				<File Id="529809776" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_01.wav</ShortName>
@@ -329,9 +357,17 @@
 					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
 					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_0C106ECA.wem</CachePath>
 				</File>
+				<File Id="561833537" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_hit.wav</ShortName>
+					<CachePath>SFX/ghost_vox_hit_D323EF67.wem</CachePath>
+				</File>
 				<File Id="569721524" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_drip_12.wav</ShortName>
 					<CachePath>SFX/env_os_drip_12_E05C0F68.wem</CachePath>
+				</File>
+				<File Id="572926054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_02.wav</ShortName>
+					<CachePath>SFX/player_deflect_02_EBBF2853.wem</CachePath>
 				</File>
 				<File Id="581889273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_squeak_04.wav</ShortName>
@@ -383,11 +419,11 @@
 				</File>
 				<File Id="715502246" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_bottle_hit_03.wav</ShortName>
-					<CachePath>SFX/item_bottle_hit_03_0E39A336.wem</CachePath>
+					<CachePath>SFX/item_bottle_hit_03_521C2755.wem</CachePath>
 				</File>
 				<File Id="720878057" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_bottle_hit_05.wav</ShortName>
-					<CachePath>SFX/item_bottle_hit_05_EB3B71E7.wem</CachePath>
+					<CachePath>SFX/item_bottle_hit_05_9501E23D.wem</CachePath>
 				</File>
 				<File Id="726460796" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_drip_01.wav</ShortName>
@@ -396,6 +432,10 @@
 				<File Id="728308374" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
 					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_512F9474.wem</CachePath>
+				</File>
+				<File Id="732019369" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_01.wav</ShortName>
+					<CachePath>SFX/player_deflect_01_C7A05A51.wem</CachePath>
 				</File>
 				<File Id="734080490" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>env_loop_centerfill.wav</ShortName>
@@ -420,7 +460,7 @@
 				</File>
 				<File Id="810615364" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_bottle_hit_06.wav</ShortName>
-					<CachePath>SFX/item_bottle_hit_06_8FC9E1D3.wem</CachePath>
+					<CachePath>SFX/item_bottle_hit_06_BACC9186.wem</CachePath>
 				</File>
 				<File Id="811915102" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>env_loop_cellar.wav</ShortName>
@@ -448,6 +488,10 @@
 					<ShortName>ghost_vox_notice.wav</ShortName>
 					<CachePath>SFX/ghost_vox_notice_04D957C5.wem</CachePath>
 				</File>
+				<File Id="865077179" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ghost_vox_hit.wav</ShortName>
+					<CachePath>SFX/ghost_vox_hit_3D15A450.wem</CachePath>
+				</File>
 				<File Id="886952836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_06.wav</ShortName>
 					<CachePath>SFX/env_os_rats_06_0D1EB3D6.wem</CachePath>
@@ -458,7 +502,7 @@
 				</File>
 				<File Id="913826613" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_bottle_hit_02.wav</ShortName>
-					<CachePath>SFX/item_bottle_hit_02_B1C673B5.wem</CachePath>
+					<CachePath>SFX/item_bottle_hit_02_1B75BF5B.wem</CachePath>
 				</File>
 				<File Id="925581424" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateS_hit_03.wav</ShortName>
@@ -521,6 +565,10 @@
 					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
 					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_DC754CE8.wem</CachePath>
 				</File>
+				<File Id="992989276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_07.wav</ShortName>
+					<CachePath>SFX/player_deflect_07_A18A6366.wem</CachePath>
+				</File>
 				<File Id="994700634" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ghost_summon.wav</ShortName>
 					<CachePath>SFX/ghost_summon_72C1AD68.wem</CachePath>
@@ -553,7 +601,19 @@
 					<ShortName>ghost_vox_notice.wav</ShortName>
 					<CachePath>SFX/ghost_vox_notice_67AF61A9.wem</CachePath>
 				</File>
+				<File Id="1071191720" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_deflect_05.wav</ShortName>
+					<CachePath>SFX/player_deflect_05_6A119957.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="964645542" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="3552193294" Name="env_attic_verb" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1697873554" Name="amb_attic_start" DurationType="Infinite">
 					<MediaRefs>
@@ -627,6 +687,29 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="979070061" Name="ghost_attack" MaxAttenuation="40" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2585212826" Name="ghost_damage" MaxAttenuation="40" DurationType="OneShot" DurationMin="0.7768402" DurationMax="1.1518666">
+					<MediaRefs>
+						<MediaRef Id="196917997"/>
+						<MediaRef Id="273707060"/>
+						<MediaRef Id="278030697"/>
+						<MediaRef Id="403673127"/>
+						<MediaRef Id="496235049"/>
+						<MediaRef Id="545847753"/>
+						<MediaRef Id="561833537"/>
+						<MediaRef Id="651684769"/>
+						<MediaRef Id="836858474"/>
+						<MediaRef Id="865077179"/>
+						<MediaRef Id="973742346"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="964645542"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="3552193294"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 				<Event Id="2809720724" Name="ghost_surprise" MaxAttenuation="40" DurationType="OneShot" DurationMin="0.7310636" DurationMax="1.154311">
 					<MediaRefs>
 						<MediaRef Id="202396748"/>
@@ -754,6 +837,20 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1303326062" Name="player_deflect" MaxAttenuation="40" DurationType="OneShot" DurationMin="0.15301028" DurationMax="0.35870507">
+					<MediaRefs>
+						<MediaRef Id="99372517"/>
+						<MediaRef Id="420572592"/>
+						<MediaRef Id="445232177"/>
+						<MediaRef Id="572926054"/>
+						<MediaRef Id="732019369"/>
+						<MediaRef Id="992989276"/>
+						<MediaRef Id="1071191720"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="591668312" Name="objects_fx"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="3483086956" Name="UI_AttackIndicatorS" DurationType="OneShot" DurationMin="0.24970828" DurationMax="0.24970828">
 					<MediaRefs>
 						<MediaRef Id="105318634"/>
@@ -786,5 +883,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4BF82EAE-0B3F-D842-9B59-0500F1822D74}</FileHash>
+	<FileHash>{94C05AC1-B8EA-59C3-8DF5-2AD056951DB7}</FileHash>
 </SoundBanksInfo>
