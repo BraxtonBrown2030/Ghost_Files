@@ -12,6 +12,7 @@
 						<Switch Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
 						<Switch Name="default" ID="{D544DEBA-2CB0-4D1F-BDDF-8799057E8B7B}"/>
 						<Switch Name="table" ID="{E0E6451F-50CD-480D-A764-1C4AA784B3C4}"/>
+						<Switch Name="glass" ID="{2275DE46-F488-4DE0-98BA-0AF77FEE2D3F}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="item_size" ID="{BC4C3712-5DB7-42C7-9116-4E83C28511BB}">

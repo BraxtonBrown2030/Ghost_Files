@@ -188,6 +188,8 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
+  resetObjectBehaviour: {fileID: -2894103102297352672}
 --- !u!1 &5462935802817072277
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ public class ObjectManager : MonoBehaviour
             objectBehaviour.originSpawn = randomSpawner;
 
             spawnedObjects.Add(objectBehaviour);
-            Debug.Log("Object added to list " + newObject.name);
+            //Debug.Log("Object added to list " + newObject.name);
 
             // Disable Spawn (later re-enable)
             enabledSpawns.Remove(randomSpawner);

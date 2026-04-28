@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5226131991394888670}
   - component: {fileID: 3626702963973569816}
   - component: {fileID: 1072705913381807361}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2351734675593368275}
   - component: {fileID: 3659939229925041491}
   - component: {fileID: 1979571547560505571}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Candle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 8381000028944500618}
   - component: {fileID: 7846860382419010348}
   - component: {fileID: 1023011480792943390}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle2_Candle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,9 +285,9 @@ GameObject:
   - component: {fileID: -457611040285243145}
   - component: {fileID: -4694065205117182123}
   - component: {fileID: 2805999723256530977}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: TallCandleRef_TallCandle (1)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c6743083e37571e468a9335247e30463, type: 2}
   itemSize:
     idInternal: 0
     valueGuidInternal: 
@@ -435,6 +435,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &2805999723256530977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -465,7 +466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3014357434468032892}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candles2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +504,7 @@ GameObject:
   - component: {fileID: 579116767040841779}
   - component: {fileID: 7816562701303187235}
   - component: {fileID: 2596756271913667600}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +593,7 @@ GameObject:
   - component: {fileID: 793932549676086261}
   - component: {fileID: 9211771494616404930}
   - component: {fileID: 7453167835560271915}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Candle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +683,7 @@ GameObject:
   - component: {fileID: 8482073383348806551}
   - component: {fileID: 389214933488471033}
   - component: {fileID: 4444274685236535806}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,7 +772,7 @@ GameObject:
   - component: {fileID: 845522738685664161}
   - component: {fileID: 1556444628902600382}
   - component: {fileID: 1626134791027290970}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle2_WickCandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +861,7 @@ GameObject:
   - component: {fileID: 8834222774515520996}
   - component: {fileID: 3232006341581614821}
   - component: {fileID: 8959382133862556175}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Candle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +951,7 @@ GameObject:
   - component: {fileID: 3602903357944349615}
   - component: {fileID: 8281287794299656891}
   - component: {fileID: 6673480280665230962}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle3_Candle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1041,7 @@ GameObject:
   - component: {fileID: 2089865697726799340}
   - component: {fileID: 4747410669431799429}
   - component: {fileID: 4789475433520234456}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Attc_Prop_Environment_Candle1_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -24,7 +24,7 @@ public class DamageBehaviour : MonoBehaviour
 		ResetObjectBehaviour resetBehaviour = other.GetComponent<ResetObjectBehaviour>();
 	if(resetBehaviour == null)
 	{
-		Debug.Log("no behaviour found");
+		//Debug.Log("no behaviour found");
 	}
 		if (this.gameObject.CompareTag("Ghost"))
 		{

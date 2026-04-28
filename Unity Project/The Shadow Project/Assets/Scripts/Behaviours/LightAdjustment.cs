@@ -4,11 +4,11 @@ public class LightAdjustment : MonoBehaviour
 {
     private float intensityValue;
     private Light adjustLight;
+    public FloatData lightData;
 
     void Awake()
     {
-        adjustLight = GetComponent<Light>();
-        if (adjustLight != null) intensityValue = adjustLight.intensity;
+        SetIntensity();
     }
 
     void Update()
@@ -34,9 +34,9 @@ public class LightAdjustment : MonoBehaviour
         ChangeIntensity(-10f);
     }
 
-    private void SetIntensity(float value)
+    private void SetIntensity()
     {
-        intensityValue = value;
+        intensityValue = lightData.value;
         if (adjustLight == null) adjustLight = GetComponent<Light>();
         if (adjustLight != null) adjustLight.intensity = intensityValue;
     }
@@ -46,5 +46,6 @@ public class LightAdjustment : MonoBehaviour
         intensityValue += delta;
         if (adjustLight == null) adjustLight = GetComponent<Light>();
         if (adjustLight != null) adjustLight.intensity = intensityValue;
+        lightData.value = intensityValue;
     }
 }

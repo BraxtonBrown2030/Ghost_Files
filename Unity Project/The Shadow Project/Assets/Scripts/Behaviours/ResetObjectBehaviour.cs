@@ -5,7 +5,10 @@ public class ResetObjectBehaviour : MonoBehaviour
 {
     public void StartTimeDestroy()
     {
+		Debug.Log("Done deal pt.1");	
         StartCoroutine(TimeDestroy());
+		StartCoroutine(CleanUp());
+		Debug.Log("Done deal");
     }
     IEnumerator TimeDestroy()
     {
@@ -13,6 +16,16 @@ public class ResetObjectBehaviour : MonoBehaviour
         Reset();
 
     }
+
+	IEnumerator CleanUp()
+	{
+		Vector3 location = transform.position;
+		yield return new WaitForSeconds(5.0f);
+		if (location == transform.position)
+		{
+			Reset();
+		}
+	}
     public void Reset()
     {
         GameObject manager = GameObject.Find("ObjectManager");

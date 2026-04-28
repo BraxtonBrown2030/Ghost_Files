@@ -5651,6 +5651,557 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 										</BlendContainer>
+										<RandomSequenceContainer Name="glass" ID="{7C4ECDE4-9A89-4280-90BF-F2196FB55105}" ShortID="702434965">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="glass_hit" ID="{FF676795-4738-4EF4-8DA7-975634EB510A}" ShortID="564647206">
+													<PropertyList>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="item_bottle_hit_01" ID="{4F764390-95EE-454E-8664-D04378D3684F}" ShortID="816212801">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_bottle_hit_01" ID="{CE2CA269-A50E-4ABF-B2FE-D20806B05A3B}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0112905604719764"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.273231563421829"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0135486725663717"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.841146755162241"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_bottle_hit_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="143728209"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_bottle_hit_01" ID="{CE2CA269-A50E-4ABF-B2FE-D20806B05A3B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_bottle_hit_02" ID="{CE259557-2DA2-423A-93D0-FD998F206102}" ShortID="593964606">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_bottle_hit_02" ID="{BD1DD73B-721C-4F05-B760-D274AEED9DAA}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00566002949852508"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.104144542772861"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0271681415929204"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.744859882005899"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_bottle_hit_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="913826613"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_bottle_hit_02" ID="{BD1DD73B-721C-4F05-B760-D274AEED9DAA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_bottle_hit_03" ID="{6F311149-328B-4016-9D89-E642C99FF3AB}" ShortID="774285735">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_bottle_hit_03" ID="{77C8FFF2-4003-42C8-8C13-C4522E46A179}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00261725663716814"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.144821533923304"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0209380530973451"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.59586209439528"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_bottle_hit_03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="715502246"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_bottle_hit_03" ID="{77C8FFF2-4003-42C8-8C13-C4522E46A179}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_bottle_hit_04" ID="{B554F2C1-7E87-4BE6-AFA6-CC5412B1909E}" ShortID="375471623">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_bottle_hit_04" ID="{72994D92-F11D-4B8E-9DF3-5846AE2EC928}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00108775811209439"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.254535398230088"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0228429203539823"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.748377581120944"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_bottle_hit_04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="359024133"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_bottle_hit_04" ID="{72994D92-F11D-4B8E-9DF3-5846AE2EC928}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_bottle_hit_05" ID="{A8F6CA5E-593F-4645-A681-249F8D391661}" ShortID="248010964">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_bottle_hit_05" ID="{0DD13244-E52A-477B-96D6-A8B30328CC1E}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00582227138643068"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.182819321533923"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0197957227138643"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.714974926253686"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_bottle_hit_05.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="720878057"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_bottle_hit_05" ID="{0DD13244-E52A-477B-96D6-A8B30328CC1E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_bottle_hit_06" ID="{62F914AC-5AEA-40F2-8806-A01359090E4E}" ShortID="653914732">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_bottle_hit_06" ID="{2C81ED04-7BA6-42FA-AE20-67B81E14F103}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00461283185840708"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.166984513274336"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0230641592920354"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.652254424778761"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_bottle_hit_06.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="810615364"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_bottle_hit_06" ID="{2C81ED04-7BA6-42FA-AE20-67B81E14F103}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="glass_scatter" ID="{EE5DD373-D704-4264-BE3D-C735C021F0DC}" ShortID="820007900">
+													<PropertyList>
+														<Property Name="3DPosition" Type="int16" Value="1"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Objects" ID="{7040F9CE-2011-4BD1-B0CD-7170B25461F3}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="item_glass_scatter_09" ID="{F807B8DE-8627-4CEE-B336-BF8E8DDEFA2A}" ShortID="219159153">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_10" ID="{4EC08B81-E262-4166-B624-26ECC007BFEB}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0798230088495575"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.024188790560472"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_10.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="397562797"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_10" ID="{4EC08B81-E262-4166-B624-26ECC007BFEB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_01" ID="{7EB3DB7F-7662-468B-8E2F-60FBF2F3819B}" ShortID="698992598">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_11" ID="{70F843A9-1507-4641-913B-5261A506C26D}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0795819505899705"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.058821441740413"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_11.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="188725517"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_11" ID="{70F843A9-1507-4641-913B-5261A506C26D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_02" ID="{59ACA94B-047D-4C20-AE8D-77EBCD098600}" ShortID="705202602">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_12" ID="{CFF90A5F-2E44-4E4B-8F41-F6AF91158683}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0546704461651917"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0273352230825959"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_12.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="326218597"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_12" ID="{CFF90A5F-2E44-4E4B-8F41-F6AF91158683}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_03" ID="{702C7924-4AE3-46F8-A7F9-1A488804F328}" ShortID="528992783">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-6</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_13" ID="{DF6C25DB-1346-43EF-9D6A-B8002D668027}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.023952802359882"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0369557522123894"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_13.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="191743886"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_13" ID="{DF6C25DB-1346-43EF-9D6A-B8002D668027}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_04" ID="{F61C9330-BBD6-4AE3-8A8F-29941EBCB5CA}" ShortID="125417237">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_14" ID="{E44C5151-B5C8-49B1-B166-FB16BB54FDA8}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0306312684365782"/>
+																		<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_14.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="491661421"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_14" ID="{E44C5151-B5C8-49B1-B166-FB16BB54FDA8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_05" ID="{F8A65D24-0DCA-4E18-BCFB-E60F5D0EEB8C}" ShortID="143632617">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-3</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_15" ID="{1897B8F3-0797-47B2-811B-F8CF3821CA98}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0607433628318585"/>
+																		<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_15.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="163962946"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_15" ID="{1897B8F3-0797-47B2-811B-F8CF3821CA98}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_06" ID="{C9953529-14FB-40FC-A83D-2C3B639514FC}" ShortID="1018433411">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_16" ID="{F5CF0479-DD5A-4E43-917C-80174B7F70AC}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0130169616519174"/>
+																		<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_16.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="519045549"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_16" ID="{F5CF0479-DD5A-4E43-917C-80174B7F70AC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_07" ID="{B3C0D8DD-FA7F-4D26-A6BE-3F5A5E900200}" ShortID="204764063">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_17" ID="{EC22CDD6-CEF6-4B59-9E0F-B44EB177237B}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_17.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="134387711"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_17" ID="{EC22CDD6-CEF6-4B59-9E0F-B44EB177237B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_glass_scatter_08" ID="{74E241BF-2417-47B5-A7CF-1B98F7383804}" ShortID="10996025">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-5</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_glass_scatter_18" ID="{7C0A9C3E-2509-4369-A1E4-1E8FDDD9190E}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00561061946902655"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.409575221238938"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0904712389380529"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>item_glass_scatter_18.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="516078319"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_glass_scatter_18" ID="{7C0A9C3E-2509-4369-A1E4-1E8FDDD9190E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{27B6F97E-9748-4BE1-999B-F7F8DFFDE628}">
+															<PropertyList>
+																<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+															</PropertyList>
+															<ChildrenList>
+																<Path2D Name="glass_scatter_Path" ID="{1A4D1345-042A-413A-ADC3-99F548795A66}">
+																	<PropertyList>
+																		<Property Name="AppendOffset" Type="Uint32" Value="474"/>
+																		<Property Name="Duration" Type="Uint32" Value="2001"/>
+																		<Property Name="RandomX" Type="Real64" Value="39"/>
+																		<Property Name="RandomY" Type="Real64" Value="36"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>11.86441</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+															</ChildrenList>
+														</Position>
+													</PositioningInfo>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="glass_hit" ID="{FF676795-4738-4EF4-8DA7-975634EB510A}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="glass_scatter" ID="{EE5DD373-D704-4264-BE3D-C735C021F0DC}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
 										<GroupingBehaviorList>
@@ -5673,6 +6224,9 @@
 												<ItemRef Name="default_type" ID="{CCAE66BC-3322-4101-9AC7-C6DC37D3BF49}"/>
 											</GroupingBehavior>
 											<GroupingBehavior>
+												<ItemRef Name="glass" ID="{7C4ECDE4-9A89-4280-90BF-F2196FB55105}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
 												<ItemRef Name="Candles" ID="{719D05ED-944C-42AA-A795-2309465F0202}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
@@ -5693,6 +6247,12 @@
 												<SwitchRef Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
 												<ItemList>
 													<ItemRef Name="Candelabra" ID="{4CE1951D-B23A-426F-AB1A-1FD96DF43BF5}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="glass" ID="{2275DE46-F488-4DE0-98BA-0AF77FEE2D3F}"/>
+												<ItemList>
+													<ItemRef Name="glass" ID="{7C4ECDE4-9A89-4280-90BF-F2196FB55105}"/>
 												</ItemList>
 											</Grouping>
 											<Grouping>

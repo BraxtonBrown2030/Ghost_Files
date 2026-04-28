@@ -14,19 +14,23 @@ public class ThrowableReturnBehavior : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log('1');
         if (other.TryGetComponent(out ObjectBehaviour objectBehaviour))
         {
+            Debug.Log('2');
             if (objectBehaviour.thrown == true && objectBehaviour.returnable == true)
             {
+                Debug.Log('3');
                 // End Current Throw
                 throwObjectManager.EndThrow(objectBehaviour.gameObject);
-
+                Debug.Log('4');
                 // Start Return Throw
                 objectBehaviour.returned = true;
-                throwObjectManager.StartThrow(objectBehaviour.gameObject, target.position, objectBehaviour.throwSpeed);
-
+                throwObjectManager.StartPlayerThrow(objectBehaviour.gameObject, target.position, objectBehaviour.throwSpeed);
+                Debug.Log('5');
                 //Wwise Audio Trigger
                 playerDeflect.Post(gameObject);
+                Debug.Log('6');
             }
         }
     }

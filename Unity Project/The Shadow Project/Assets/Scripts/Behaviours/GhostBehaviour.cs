@@ -14,6 +14,7 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using UnityEngine.SceneManagement;
 
 public class GhostBehaviour : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class GhostBehaviour : MonoBehaviour
 
     [Header("Info")]
     [SerializeField] private Quaternion rotation;
-    [SerializeField] public bool isWandering = false, isDrifting = false, isAttacking = false, waiting = false;
+    [SerializeField] public bool isWandering = false, isDrifting = false, isAttacking = false, waiting = false, noSceneChange = true;
 
     [SerializeField] public List<TransformDataList> players;
 
@@ -241,11 +242,29 @@ public class GhostBehaviour : MonoBehaviour
             
         }  
     }
+	
+	public IEnumerator SwitchScene()
+	{
+		yield return new WaitForSeconds(2);
+		string sceneName = SceneManager.GetActiveScene().name;
+		if(noSceneChange == true)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+		}	
+		else if(sceneName == "MainScene")
+		{
+			SceneManager.LoadScene("CellarScene 1");
+		}
+		else
+		{
+			SceneManager.LoadScene("MainScene");
+		}
+	}
 
     public void ThrowObject(GameObject throwable, Vector3 newLocation)
     {
         // Being Linear Throw to location
-        throwManager.StartCoroutine(throwManager.MoveOverTime(throwable, newLocation, throwSpeed));
+        throwManager.StartThrow(throwable, newLocation, throwSpeed);
     }
     public void LevitateObject(GameObject throwable)
     {
@@ -278,6 +297,7 @@ public class GhostBehaviour : MonoBehaviour
     {
         animator.SetTrigger("disappear");
         animator.SetBool("alive", false);
+		StartCoroutine(SwitchScene());
     }
 
     public void Appear()
@@ -373,7 +393,10 @@ public class GhostBehaviour : MonoBehaviour
     }
 	public void CancelAttack()
 	{
-		ResetObjectBehaviour reset = throwable.GetComponentInChildren<ResetObjectBehaviour>();
-		reset.Reset();
+		if(throwable != null)
+		{
+			ResetObjectBehaviour reset = throwable.GetComponentInChildren<ResetObjectBehaviour>();
+			reset.Reset();
+		}
 	}
 }

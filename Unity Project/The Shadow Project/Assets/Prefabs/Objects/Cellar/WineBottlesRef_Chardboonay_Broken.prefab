@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3122005584956570479}
   - component: {fileID: 206773385726517427}
   - component: {fileID: -9150997760742152383}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Chardboonay_Broken
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 7113db2a7723feb41b2dd54c9f9246f1, type: 2}
   itemSize:
     idInternal: 0
     valueGuidInternal: 
@@ -112,6 +112,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &-9150997760742152383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,7 +145,7 @@ GameObject:
   - component: {fileID: 4688135647403825772}
   - component: {fileID: 177711972050525158}
   - component: {fileID: 7746684457689017822}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Chardboonay_Broken_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +235,7 @@ GameObject:
   - component: {fileID: 2011805940319724177}
   - component: {fileID: 7554702462459395197}
   - component: {fileID: 3744137368637191772}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Chardboonay_Broken_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +325,7 @@ GameObject:
   - component: {fileID: 4760063839309842517}
   - component: {fileID: 201267883569009835}
   - component: {fileID: 6611844980954757815}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Chardboonay_Broken_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +415,7 @@ GameObject:
   - component: {fileID: 5538678341699530702}
   - component: {fileID: 8934359246762963347}
   - component: {fileID: 3010541348062676366}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Chardboonay_Broken_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +505,7 @@ GameObject:
   - component: {fileID: 6036705800082879357}
   - component: {fileID: 71990536214918497}
   - component: {fileID: 331084901230433539}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WineBottlesRef_Chardboonay_Broken_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

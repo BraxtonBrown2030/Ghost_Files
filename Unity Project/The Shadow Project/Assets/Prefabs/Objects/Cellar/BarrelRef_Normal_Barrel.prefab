@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: -8520284390865899502}
   - component: {fileID: 2502420874859917052}
   - component: {fileID: -6122686633359468068}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BarrelRef_Normal_Barrel
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c6743083e37571e468a9335247e30463, type: 2}
   itemSize:
     idInternal: 0
     valueGuidInternal: 
@@ -165,6 +165,7 @@ MonoBehaviour:
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
+  objectBehaviour: {fileID: 0}
 --- !u!65 &-6122686633359468068
 BoxCollider:
   m_ObjectHideFlags: 0
